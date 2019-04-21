@@ -205,8 +205,8 @@
   $('#join').on('click', () => {
     const name = $('#nameJoin').val();
     const roomID = $('#room').val();
-    if (!name || !roomID) {
-      alert('Please enter your name and game ID.');
+    if (!name) {
+      alert('Please enter your name.');
       return;
     }
     socket.emit('joinGame', { name, room: roomID });
